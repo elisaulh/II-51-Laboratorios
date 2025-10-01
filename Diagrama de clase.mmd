@@ -1,0 +1,20 @@
+classDiagram
+    class Estudiante {
+        -id:int 
+        -nombre: string
+        -email: string
+        -carrera: string
+        +registo(): void
+        +editarPerfil(): void
+        +consultarloscursos(): list<Curso>
+    }
+
+    class Curso {
+        -codigo: string
+        -nombre: string
+        -creditos: int 
+        +matricula(): void
+        +retirar(): void
+    }
+
+    Estudiante "1" --> "*" Curso : matricula
